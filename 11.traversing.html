@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <table class="table table-bordered">
+          <tr>
+            <td>td1</td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+          </tr>
+          <tr>
+            <td>td1</td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+          </tr>
+          <tr>
+            <td>td1</td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+          </tr>
+          <tr>
+            <td>td1</td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+          </tr>
+          <tr>
+            <td>td1</td>
+            <td>td2</td>
+            <td>td3</td>
+            <td>td4</td>
+            <td>td5</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="wrap">
+      <h1>H1</h1>
+      <h2>H2</h2>
+    </div>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // $('td:eq(0)').css('background', 'yellow');
+      // $('td').css('background', 'yellow').eq(1).css('background', 'blue');
+      $('td')
+        .css('background', 'yellow')
+        .even()
+        .css('background', 'blue')
+        .eq(0)
+        .css('background', 'red');
+    </script>
+  </body>
+</html>

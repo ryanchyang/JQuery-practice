@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .box {
+        border: 1px solid red;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- <p>p1</p> -->
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+      <div class="box">box4</div>
+      <div class="box">box5</div>
+      <div class="box">box6</div>
+      <div class="box">box7</div>
+      <div class="box">box8</div>
+      <div class="box">box9</div>
+      <div class="box">box10</div>
+      <div class="box">box11</div>
+      <div class="box">box12</div>
+    </div>
+
+    <div class="wrap">
+      <div class="box">box1</div>
+      <p>p1</p>
+    </div>
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // $('.box:first-child').css('background', 'red');
+      // $('.box:last-child').css('background', 'red');
+      // $('.box:first-of-type').css('background', 'red');
+      // $('.box:last-of-type').css('background', 'red');
+      // $('.box:nth-child(3)').css('background', 'red');
+      // $('.box:nth-of-type(3)').css('background', 'blue');
+      // $('div :nth-of-type(1)').css('background', 'blue');
+      // $('div:only-child').css('background', 'blue');
+      $('div:only-of-type').css('background', 'blue');
+    </script>
+  </body>
+</html>
