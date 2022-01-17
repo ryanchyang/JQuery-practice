@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        height: 600vh;
+      }
+      .wrap {
+        position: fixed;
+        top: 0;
+        background-color: beige;
+        width: 100%;
+        height: 50px;
+      }
+      .box {
+        background-color: blueviolet;
+        width: 10%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box"></div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $(window).scroll(() => {
+        // console.log('hi');
+
+        console.log('scrolltop:', $(window).scrollTop());
+        console.log('scrollleft:', $(window).scrollLeft());
+        console.log('winW:', $('body').width());
+        console.log('winH:', $('body').height());
+
+        const unit =
+          $(window).scrollTop() / ($('body').height() - $(window).height());
+        console.log(unit);
+        $('.box').css('width', `${unit * 100}%`);
+      });
+    </script>
+  </body>
+</html>

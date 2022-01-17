@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>add</button>
+    <ul>
+      <li>Item1</li>
+      <li>Item2</li>
+    </ul>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $('button').on('click', function () {
+        const item = `<li>Item3</li>`;
+        $('ul').append(item);
+      });
+
+      $('ul').on('click', 'li', function () {
+        console.log('clicked');
+      });
+    </script>
+  </body>
+</html>
