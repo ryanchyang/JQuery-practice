@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <title>Document</title>
+    <style>
+      .imgShow {
+        width: 600px;
+      }
+      .imgWrap img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row col-12">
+        <div class="imgShow">
+          <img src="./imgs/product1.jpg" alt="" />
+        </div>
+        <div class="imgWrap d-flex">
+          <div class="imgPrev">
+            <img src="./imgs/product1.jpg" alt="" />
+          </div>
+          <div class="imgPrev">
+            <img src="./imgs/product2.jpg" alt="" />
+          </div>
+          <div class="imgPrev">
+            <img src="./imgs/product3.jpg" alt="" />
+          </div>
+          <div class="imgPrev">
+            <img src="./imgs/product4.jpg" alt="" />
+          </div>
+          <div class="imgPrev">
+            <img src="./imgs/product5.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+      $('.imgWrap img').click(function () {
+        // console.log($(this));
+        const imgSrc = $(this).attr('src');
+        $('.imgShow img').attr('src', imgSrc);
+      });
+    </script>
+  </body>
+</html>

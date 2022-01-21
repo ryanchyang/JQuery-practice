@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <style>
+      .price {
+        color: red;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- SPA single page application -->
+    <div id="root"></div>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+      $.ajax({
+        method: 'GET',
+        url: './datas/mask.json',
+        dataType: 'json',
+      }).done(function (result) {
+        console.log(result);
+        render(result);
+      });
+
+      // .js
+      function render(data) {
+        // JSX
+        const myCards = data.map((element) => {
+          return `<div class="mt-2 col-12 col-sm-6 col-lg-3">
+          <div class="card">
+            <img src="./images/${element.image}" alt="" />
+            <div class="card-body">
+              <h5>${element.name}</h5>
+              <p class="price">$${element.price}</p>
+            </div>
+          </div>
+        </div>`;
+        });
+
+        console.log(typeof `${myCards}`);
+        document.getElementById('root').innerHTML = `
+        <div class="container">
+          <div class="row">
+              ${myCards.join('')}
+            </div>
+        </div>
+        `;
+      }
+    </script>
+  </body>
+</html>

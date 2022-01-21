@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex1</title>
+    <link
+      rel="stylesheet"
+      href="./bootstrap-4.6.1-dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <table class="table table-bordered">
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script>
+      $('input').click(function () {
+        // console.log("hi", $(this).attr("checked"));
+        // console.log("hi", $(this).prop("checked"));
+        // // $(this).css("background", "lightblue");
+        // if ($(this).prop("checked")) {
+        //   $(this).closest("tr").css("background", "lightblue");
+        // } else {
+        //   $(this).closest("tr").css("background", "transparent");
+        // }
+      });
+      $('input').click(function () {
+        $('tr').css('background', 'transparent');
+
+        $('input:checked').closest('tr').css('background', 'lightblue');
+      });
+    </script>
+  </body>
+</html>
