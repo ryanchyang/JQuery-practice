@@ -1,0 +1,61 @@
+kuro 考題
+
+1. 對你來說，你認為擔任前端工程師最重要的是什麼？
+
+2. 如果說未來半年讓你投入某個新技術，你會選擇什麼？ 理由是？
+
+3. 什麼是 Single Page Application (SPA)? 簡單說明一下 SPA 的適用與不適用的場景。
+
+4. 試著說明 JavaScript 事件中 e.target 與 e.currentTarget 有什麼不同。
+Kuro IT鐵人賽文章(Q4+Q6解)：
+https://ithelp.ithome.com.tw/articles/10192015
+
+5. 簡單說明 <span> 、 <div> 、 <p> 、 <article> 、 <section> 之間的差異，以及何時該用哪
+
+6. 如網址， https://jsbin.com/visenicetu/1/edit?html,js,output 點擊 del 按鈕時會將該筆 list 刪除，
+而點擊 add 按鈕時會新增一筆新的 list。 此時問題來了，點擊新生出來 list 的 del 按鈕時卻無法刪除，
+請說明該如何解決這個問題，以及原因為何。
+
+文章
+https://ithelp.ithome.com.tw/articles/10201915?sc=iThelpR
+
+解法
+https://jsbin.com/dahukukige/1/edit?html,js,console,output
+
+
+
+7. 試著用 JavaScript 寫出一個 deDuplicate 函式，傳入的參數可以是一至多個陣列，
+   回傳值為一個合併後且元素內容不重複的新陣列，如：
+
+   deDuplicate([1, 2, 3], [1, 3, 5]) ==> 回傳值 [1, 2, 3, 5]
+   
+   deDuplicate([3, 2, 1], [2, 3, 4, 5], [1, 3, 5]) ==> 回傳值 [3, 2, 1, 4, 5]
+
+   deDuplicate([1, 2, 1]) ==> 回傳值 [1, 2]
+
+   試著完成這個 deDuplicate 函式。
+
+
+知識文章：
+https://guahsu.io/2017/06/JavaScript-Duplicates-Array/
+
+解法：
+https://jsbin.com/yicavikono/edit?html,js,console,output
+
+
+8. 有一份 JSON 內容如網址：
+   https://raw.githubusercontent.com/kurotanshi/mask-map/master/raw/area-location.json
+   請試著製作一個 input 輸入框，完成 Autocomplete 功能， json 必須透過 ajax 方式讀取。
+   用你最熟悉的技術做就好。
+
+   ex: 輸入 「臺北」 時會跳出 臺北市中正區、臺北市大同區、臺北市中山區、臺北市松山區...等，
+   輸入 「新竹」 時會跳出 新竹市東區、新竹市北區、新竹市香山區、新竹縣竹北市、新竹縣湖口鄉...等，依此類推。
+
+
+https://jsbin.com/hoxitipodu/edit?html,js,console,output
+
+
+
+9. 描述一個你近期實際遇到印象深刻的 JavaScript 問題與解決方式。
+
+10. 描述一個你近期實際遇到印象深刻的 CSS 問題與解決方式。

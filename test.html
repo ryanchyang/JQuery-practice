@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="myInput" />
+    <p id="show"></p>
+
+    <script>
+      let myData;
+
+      async function getData() {
+        const url =
+          'https://raw.githubusercontent.com/kurotanshi/mask-map/master/raw/area-location.json';
+
+        //             const url = './address.json'
+
+        fetch(url)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (jsonData) {
+            myData = jsonData;
+            console.log(myData);
+          });
+      }
+
+      getData();
+
+      let myInput = document.querySelector('#myInput');
+      let show = document.querySelector('#show');
+      myInput.addEventListener('input', () => {
+        // console.log('hi', myInput.value);
+        let result = myData.filter((element) => {
+          // console.log(element.name.substring(0, 2))
+          return element.name.substring(0, 2) === myInput.value;
+        });
+
+        //             console.log('result', result[0]);
+        if (result.length > 0) show.innerHTML = '';
+        result.length > 0 &&
+          result[0].districts.forEach((element) => {
+            let newNode = document.createElement('p');
+            newNode.innerHTML = element.name;
+            show.appendChild(newNode);
+          });
+      });
+    </script>
+  </body>
+</html>

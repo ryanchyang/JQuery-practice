@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function deDuplicate(...arr) {
+        var result = new Set();
+        var repeat = new Set();
+
+        arr.forEach((item) => {
+          item.forEach((subItem) => {
+            console.log('subItem', subItem);
+            console.log(result.has(subItem));
+            result.has(subItem) ? repeat.add(subItem) : result.add(subItem);
+          });
+        });
+
+        console.log('result', result);
+      }
+
+      deDuplicate([1, 2, 3], [1, 3, 5]);
+    </script>
+  </body>
+</html>
